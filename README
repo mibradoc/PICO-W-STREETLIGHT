@@ -1,0 +1,13 @@
+This project is for microprocessor Raspberry Pico W 2040
+It turn on the led on board at sunset and turn it off at sunrise     
+Picow needs three files uploaded:
+1.- main.py The main code wich start executing itself when power is switched on
+2.- srss.dta wich contains the sr and ss times from a year of 366 days at Seneffe (Belgium)
+3.- pesonal.py Before you put it on pico you need to complete it with ssid and password from your wifi
+
+When power is switched on, after 5-10 sec the led flashes once meaning it is connected
+Then the led flashes 4 times and finaly, remains off between sunrise and sunset, or remains on at 
+any other moment, and so on while power is supplied.
+A log file with a unique name based on the utime.time() function is automaticly generated.    
+
+
