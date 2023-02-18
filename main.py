@@ -1,27 +1,24 @@
 '''
-Crédits:
+The portion of the code connecting to the wifi network is from "Connecting to 
+the Internet with Raspberry Pi Pico" 
+Chapter 3. Getting on the internet with MicroPython
+Copyright © 2022 Raspberry Pi Ltd
 
-Connexion au serveur de temps internet et mise à l'heure locale du pico_w :
-aallan/picow_ntp_client.py
-
-A partir de la ligne ...#### SRSS_SENEFFE ####... :
+From the line
+...#### SRSS_SENEFFE ####...
 mibradoc@gmail.com
+Seneffe, Belgium
+
+2023.02.18
+
 '''
 
-# 2023.02.09
-# La fonction writelog() a été réintroduite
-# les indentations ont été converties en tabulations
-
 from utime import time,gmtime,sleep,localtime
-
-
-
 import machine
 import network
 import socket
 import struct
 import personal # fichier perso avec ssid et mot de passe wifi
-
 
 NTP_DELTA = 2208988800
 host = "pool.ntp.org"
@@ -69,6 +66,7 @@ set_time()
 
 led.off()
 sleep(1)
+
 ###################################    SRSS_SENEFFE    ###############################################
 
 # Le Pico est à l'heure, le programme peut commencer:
